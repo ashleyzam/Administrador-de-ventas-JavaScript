@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>TP Javascript VENTAS</title>
+</head>
+<body>
+    <div >
+        <section id="blur-container">
+          
+          <div class="grid">
+            <header><h2><i class="fas icon1 fa-store"></i> Ventas por Sucursal </h2></header>
+            <table class="table table2">
+      
+      
+              <tr>
+                <th>Sucursal</th>
+                <th class="sale1">Total ventas</th>
+              </tr>
+              <tr>
+                <td>Centro</td>
+                <td id="centro"></td>
+              </tr>
+              <tr>
+                <td>Caballito</td>
+                <td id="caballito"></td>
+              </tr>
+      
+            </table>
+          </div>
+          <div class="report-container">
+            <header><h2>Reportes</h2></header>
+            <div class="spliter">
+              <p>Productos estrella</p>
+              <p>vendedora que más ingresos generó:</p>
+              <p id="prod-mas-vendido"></p>
+            </div>
+          </div>
+        </section>
+      
+        <section>
+          <!----><div class="table-two">
+            <header class="d-f"><h2>Ventas actuales</h2><button class="btn"><i class="fas fa-plus-circle"></i>  Nueva venta</button></header>
+      
+            <table class="table col1">
+           
+            </table>
+              <div class="modal-container hide">
+                <div class="containermodal-newSale">
+                <div class="modal">
+                  <!---->
+                  <form action="" class="nueva-venta-form">
+                    <label for="">Vendedora</label>
+                    <select class="select-option container-form" name="vendedora" id="asdd">
+                    </select>
+                    <label>Componentes</label>
+                        <select id="componentes" class="select-componentes " multiple> </select>
+                       <label for="">Sucursal</label>
+                    <select name="" id="sucursales" class="select-option single-select" selected></select>
+                      
+                     
+                    
+                    <label>Fecha</label>
+                    <input type="date" id="fecha-nueva-venta">
+                    <!--select name="" id="" multiple class="opcion2 ">
+                          
+                          </select>-->
+      
+                    <div class="buttons-flex">
+                      <input type="button" value="cerrar" class="close" id="btn-close">
+                      <input type="button" value="guardar" id="btn-save" class="btnopen">
+                      <input type="button" value="guardar" id="btn-edit" class="btnopen1  hide">-
+                    </div>
+                  </form>
+                  
+                  
+                </div>
+              </div>
+      </div>
+              <div class="modal-eliminar-venta hide">
+                <div class="containermodal-newSale">
+                <div class="modal-2">
+                  <header class="delete-sale">ELIMINIAR VENTA</header>
+                  <p>¿Estás segura? esta acción NO se puede revertir</p>
+                  <div class="buttons-flex-2"><button class="btnopen2" id="btn-accept-deletion">Eliminar</button>
+                  <button class="close2">Cancelar</button></div>
+                </div>
+              </div>
+              </div>
+              
+              
+        </section>
+      </div>
+    <!-- Colocar los scripts -->
+    <script src="ventas.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

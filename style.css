@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body{
+    font-size: 1em;
+    font-family: 'Verdana', sans-serif;
+    background-color: rgb(240, 240, 240);
+  }
+  section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.625em;
+    padding: 3.12em;
+  }
+  .grid {
+    width: 40%;
+    margin: 0.625em;
+    
+    /*border: 0.0625em solid black;*/
+  }
+  .table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: white;
+    /*border: 0.04em solid rgb(241, 241, 241)*/
+    
+  }
+  tr {
+    border-bottom: 0.0625em solid black;
+    text-align: center;
+  }
+  th {
+    text-transform: uppercase;
+    font-size: 1.1em;
+    text-align: center;
+    padding: 0.625em;
+    color: #265ba5;
+  
+    font-weight: bolder;
+  }
+  td {
+    padding: 0.61em;
+    color: #265ba5;
+    font-size: 0.99em;
+  }
+  
+  .report-container {
+    margin: 0.625em;
+    width: 40%;
+    border: 0.04em solid rgb(241, 241, 241);
+    background-color: white;
+  
+    /*border: 0.0625em solid black;*/
+  }
+  .spliter {
+    padding: 0.8em;
+    border-bottom: 2px solid rgb(110, 110, 110);
+  }
+  
+  header {
+    
+    padding: 2em;
+    background-color: /*rgb(52, 52, 131)*/ yellow;
+    color: rgb(77, 77, 177);
+    border-bottom: 0.04em solid rgb(202, 202, 202);
+  }
+  .table-two {
+    width: 100%;
+  
+    /*border: 0.04em solid rgb(241, 241, 241);/
+  }
+  .col1 {
+    /*border: 0.0625em solid black;*/
+  }
+  .show {
+    display: block;
+  }
+  .hide {
+    
+    display: none;
+  }
+  .d-f{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  }
+  .btn {
+    margin-left: 0.8em;
+    margin-top: 0.5em;
+    padding: 0.6em;
+    border-radius: 1em;
+    background-color: rgba(19, 182, 246, 0.945);
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-color:  rgb(255, 181, 239);
+  }
+  .btn:hover{
+    background-color: rgba(115, 200, 233, 0.945);
+  }
+  .fa-plus-circle{
+    color: white;
+    font-size: 20px;
+  }
+  /*.container-form{
+     
+     
+    
+  }*/
+  input {
+      width: 400px;
+      height: auto;
+      padding: 0.3125em;
+      
+      margin: 0.2em;
+      font-size: 1em;
+      font-family: 'Verdana', sans-serif;
+      border-radius: 20px;
+      
+  }
+  select{
+    margin-top: 20px;
+  }
+  .nueva-venta-form{
+    display: flex;
+      flex-direction: column;
+      padding: 20px;
+  }
+  .containermodal-newSale{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+      background-color: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+  
+  .modal-container{
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      left: 0;
+      top: 0;
+      background-color: rgb(140, 152, 216);
+      background-color: rgba(157, 137, 224, 0.8);
+      
+  
+  }
+  .modal{
+    width: 400px;
+    height: 500px;
+    padding: 20px;
+    background-color: #fffc64;
+    border-radius: 15px;
+    border: 2px solid #aaa;
+    z-index: 1;
+  }
+  
+  h2{
+    text-align: left;
+  }
+  
+  label{
+    display: block;
+    font-size: 1em;
+    font-family: 'Verdana', sans-serif;
+    margin-top: 10px;
+  }
+  .select-componentes{
+    width: 350px;
+    height: 100px;
+  }
+  option{
+    font-size: 20px;
+  }
+  
+  .opcion2{
+    width: 100%;
+    height: 100px;
+  }
+  .buttons-flex{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: 10px;
+   
+    
+  }
+  
+  .close{
+    width: 20%; 
+    background-color: white;
+    color: black;
+    border-radius: 0.8em;
+   
+  }
+  .btnopen1{
+    width: 20%;
+    background-color: rgb(107, 228, 107);
+    color: white;
+    border-radius: 0.8em;
+    cursor: pointer;
+  }
+  .btnopen{
+   width: 20%;
+   background-color: rgb(107, 228, 107);
+   color: white;
+   border-radius: 0.8em;
+   cursor: pointer;
+  }
+  .icon1{
+    color: rgb(121, 216, 121);
+  }
+  
+  .select-option{
+    border: 0.0625em solid #aaa;
+    box-shadow: 0 0.0625em 0 0.0625em rgba(0,0,0,.03);
+    border-radius: 3em;
+    background-color: #fff;
+    font-size: 1em;
+    font-family: 'Verdana', sans-serif;
+    width: 100%;
+    height: 10%;
+    padding: 0.5em;
+    color: #0f3d7c;
+    margin-top: 10px;
+    
+  }
+  input[type=date] {
+    width: 96%;
+    border: 2px solid #aaa;
+    margin: 10px auto;
+    border-radius: 5px;
+    outline: none;
+  
+    color: #0f3d7c;
+    font-size: 17px;
+  }
+  input[type=date]:hover{
+    border-color: yellow;
+  }
+  .select-option:hover{
+    border-color: yellow;
+  }
+  .select-option:focus {
+    border-color:#aaa;
+    box-shadow: 0 0 0.0625em 0.1875em rgba(59, 153, 252, .7);
+    box-shadow: 0 0 0 0.1875em -moz-mac-focusring;
+    color: #222; 
+    outline: none
+  }
+  .modal-eliminar-venta{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgb(44, 43, 43);
+    background-color: rgba(43, 42, 42, 0.8);
+    z-index: 2;
+  }
+  .modal-2{
+    width: 400px;
+    height: 250px;
+  
+    background-color: #ebecd8;
+    border-radius: 15px;
+    border: 2px solid #aaa;
+    z-index: 1;
+  }
+  .buttons-flex-2{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: 100px;
+  
+  }
+  .btnopen2{
+    width: 20%;
+    background-color: red;
+    color: white; 
+    border-radius: 0.5em;
+    font-size: 1em;
+    margin-right: 3px;
+  
+  }
+  .close2{
+    width: 20%; 
+    background-color: white;
+    color: black;
+    border-radius: 0.5em;
+    margin-right: 30px;
+    font-size: 1em;
+  }
+  .delete-sale{
+  border-radius: 15px;
+  background-color: /*rgb(52, 52, 131)*/ yellow;
+  color: rgb(44, 44, 124);
+  font-size: 18px;
+  font-weight: bolder;
+  }
+  .fa-edit{
+    font-size: 21px;
+    color: rgb(9, 179, 94);
+    cursor: pointer;
+  }
+  .fa-trash-alt{
+    font-size: 21px;
+    color: red;
+    cursor: pointer;
+  }
+  .modal-container3{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgb(140, 152, 216);
+    background-color: rgba(157, 137, 224, 0.8);
+    
+  }
+  .containermodal-editSale{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+      background-color: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+  .close3{
+    width: 20%; 
+    background-color: white;
+    color: black;
+    border-radius: 0.5em;
+    margin-right: 30px;
+    font-size: 1em;
+    
+  }
