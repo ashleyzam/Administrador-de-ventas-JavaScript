@@ -255,7 +255,6 @@ const montoVentasPorVendedora = (vend, arrVentas) => {
   return acc;
 };
 
-
 const vendedoraDelMes = (mes, anio) => {
   const { vendedoras } = local;
   const ventasPorVendedora = vendedoras.map((vendedora) => {
@@ -385,7 +384,6 @@ const renderPorMes = () => {
   return ventasMes;
 };
 
-
 const renderPorSucursal = () => {
   const { ventas, sucursales } = local;
 
@@ -413,7 +411,6 @@ const mejorVendedora = (arrVentas) => {
 };
 
 const cargarVentas = (arrVentas) => {
-
   let str = `<tr>
             <th>Fecha</th>
             <th>Vendedora</th>
@@ -433,7 +430,6 @@ const cargarVentas = (arrVentas) => {
     componentes,
     id,
   } of arrVentas) {
-
     let it = `<tr class="uno" id = "fila">
                 <td class= "eliminar-venta">${parsearFecha(fecha)}</td>
                 <td class"eliminar-venta">${nombreVendedora}</td>
@@ -470,7 +466,9 @@ const render = () => {
   prodEstrella.innerHTML = `<b>Producto Estrella</b>: ${componenteMasVendido(
     nuevoArrPrecio
   )}`;
-  bestSeller.innerHTML = `<b>Mejor Vendedora</b>: ${mejorVendedora(nuevoArrVentas)}`;
+  bestSeller.innerHTML = `<b>Mejor Vendedora</b>: ${mejorVendedora(
+    nuevoArrVentas
+  )}`;
 };
 
 render();
@@ -498,18 +496,17 @@ const deleteData = () => {
     nuevoArrVentas = nuevoArrVentas.filter(
       ({ id }) => id != productoEliminarId
     );
-    
-  limpiarTabla();
-  render();
-  cargarVentas(nuevoArrVentas);
+
+    limpiarTabla();
+    render();
+    cargarVentas(nuevoArrVentas);
   }
-}
+};
 
 acceptDeleteBtn.addEventListener("click", () => {
-  deleteData()
+  deleteData();
   blurContains.style.filter = "none";
   modalEliminarVenta.classList.add("hide");
-
 });
 const limpiarTabla = () => {
   table.innerHTML = "";
@@ -553,7 +550,6 @@ cargarSucursal();
 let getDateTime = document.querySelector("#fecha-nueva-venta");
 // FUNCIÓN PARA GUARDAR LOS VALORES DE MIS INPUTS Y SELECT/OPTIONS
 let saveData = () => {
- 
   let componentes = getSelectComponentValues(selectComponentes);
   let fecha = new Date(getDateTime.value);
   let vendedora = selectOption.value;
@@ -575,7 +571,6 @@ let saveData = () => {
   }
 };
 const changeData = () => {
-
   const { id } = nuevoArrVentas;
   let componentes = getSelectComponentValues(selectComponentes);
   let fecha = new Date(getDateTime.value);
@@ -635,7 +630,6 @@ window.addEventListener("keydown", (e) => {
     modalContains.classList.add("hide");
     modalEliminarVenta.classList.add("hide");
     //mdal3.classList.add("hide")
-
   }
   return false;
 });
@@ -678,5 +672,16 @@ btnEdit2.addEventListener("click", () => {
 btnSave.addEventListener("click", () => {
   saveData();
   modalContains.classList.add("hide");
-  blurContains.style.filter("none")
+  //blurContains.style.filter("none");
+});
+window.addEventListener("click", (e) => {
+  if(e.target === modalPrincipal)
+  modalContains.classList.add("hide");
+  //blurContains.style.filter("none");
+});
+const deleteSale = document.querySelector('.containermodal-deleteSale')
+window.addEventListener("click", (e) => {
+  if(e.target === deleteSale)
+  modalEliminarVenta.classList.add("hide");
+  //blurContains.style.filter("none");
 });
