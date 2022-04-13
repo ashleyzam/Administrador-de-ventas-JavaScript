@@ -678,4 +678,5 @@ btnEdit2.addEventListener("click", () => {
 btnSave.addEventListener("click", () => {
   saveData();
   modalContains.classList.add("hide");
+  blurContains.style.filter("none")
 });
