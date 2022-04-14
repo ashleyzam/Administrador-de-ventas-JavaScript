@@ -598,7 +598,7 @@ const validateAllItems = (comp, fec, vend, suc) => {
 };
 
 // FUNCIÓN PARA TRAER EL VALOR DE LOS SELECTS
-let getSelectComponentValues = (select) => {
+const getSelectComponentValues = (select) => {
   let result = [];
   let options = select && select.options;
   let opt;
