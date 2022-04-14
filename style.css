@@ -208,17 +208,22 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    margin-top: 10px;
+    margin-top: 2em;
    
     
   }
   
   .close{
-    width: 20%; 
+
     background-color: white;
     color: black;
     border-radius: 0.8em;
     cursor: pointer;
+    margin-right: 0.5em;
+    font-size: 1em;
+    width: 24%;
+    padding: 0.5em;
+    margin-left: 1em;
    
   }
   .btnopen1{
@@ -229,11 +234,16 @@
     cursor: pointer;
   }
   .btnopen{
-   width: 20%;
+  
    background-color: rgb(107, 228, 107);
    color: white;
-   border-radius: 0.8em;
    cursor: pointer;
+   padding: 0.5em;
+   color: white; 
+   border-radius: 0.8em;
+   font-size: 1em;
+   width: 24%;
+
   }
   .icon1{
     /*color: rgb(121, 216, 121);*/ color: white;
@@ -287,7 +297,7 @@
     z-index: 9;
   }
   .modal-2{
-    width: 352px;
+    width: 30%;
     height: 250px;
   
     background-color: #ebecd8;
@@ -299,7 +309,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    margin-top: 4.5em;
+    margin-top: 2.5em;
     /*margin-left: 5em;*/
     
   
@@ -320,7 +330,7 @@
     background-color: white;
     color: black;
     border-radius: 0.5em;
-    margin-right: 0.5em;
+    margin-right: 1em;
     font-size: 1em;
   }
   .delete-sale{
@@ -429,6 +439,13 @@
       width: 70%;
       margin-bottom: 5em;
     }
+  }
+  .pe{
+    margin-left: 0.8em;
+    margin-top: 1.4em;
+    color: red;
+    font-size: 1.2em;
+    font-weight: bolder;
   }
   @media screen and (max-width: 465px){
     
