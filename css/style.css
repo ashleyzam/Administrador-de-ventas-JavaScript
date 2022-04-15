@@ -57,8 +57,10 @@
     /*border: 0.0625em solid black;*/
   }
   .fa-chart-line{
-    font-size: 1.5em;
-    margin-left: 8em;
+    font-size: 1.4em;
+    margin-top: 0.2em;
+    margin-right: 0.2em;
+
   }
   .spliter {
     padding: 2.5em;
@@ -193,8 +195,7 @@
     margin-top: 10px;
   }
   .select-componentes{
-    width: 350px;
-    height: 100px;
+   width: 100%;
   }
   option{
     font-size: 20px;
@@ -402,6 +403,9 @@
         height: 400px;
         overflow-x:auto;
     }
+    .btn{
+      padding: 0.5em;
+    }
     
     .table {
         display: block;
@@ -410,8 +414,9 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      margin: 0.8em;
       padding: 0;
-      margin: 2em;
+      
       /*margin-left: 5em;*/
     }
     .fa-chart-line{
@@ -421,6 +426,7 @@
     }
     .report-container{
       width: 50%;
+      margin-top: 3em;
     }
     .prodEstrella{
       display: block;
@@ -430,13 +436,20 @@
     }*/
     .table tbody td,
     .table thead th{
-        width: 16%;
+        width: 15%;
     }
+    .modal{
+      width: 50%;
+    }
+    .select-componentes{
+      width: 100%;
+    }
+  
     .grid{
-      width: 70%;
+      width: 100%;
     }
     .report-container{
-      width: 70%;
+      width: 100%;
       margin-bottom: 5em;
     }
   }
@@ -447,7 +460,7 @@
     font-size: 1.2em;
     font-weight: bolder;
   }
-  @media screen and (max-width: 465px){
+  @media screen and (max-width: 475px){
     
     th{
       padding: 0;
@@ -460,6 +473,32 @@
       width: 100%;
       margin-bottom: 5em;
     }
+    section{
+      margin: 0.7em;
+    }
+    .btn{
+      padding: 0;
+      font-size: 1.1em;
+    }
+    h2{
+      font-size: 1.4em;
+    }
+    .d-f{
+      align-items: center;
+      align-content: center;
+      flex-direction: column-reverse;
+      flex-wrap: wrap;
+    }
+    .modal{
+      width: 75%;
+    }
+    .select-componentes{
+      width: 100%;
+    }
+    /* header{
+      padding: 0;
+    } */
+  
   }
   @media screen and (max-width: 300px){
     .report-container{
