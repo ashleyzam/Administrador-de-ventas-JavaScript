@@ -360,7 +360,17 @@ const sucursalDelMes = (mes, anio) => {
 const parsearFecha = (date) => {
   let dd = (date.getDate() < 10 ? "0" : "") + date.getUTCDate();
   let anio = date.getFullYear();
-  let mm = (date.getMonth() + 1 < 10 ? "0" : "") + (date.getMonth() + 1);
+  let mm
+  if(dd === '1'){
+    dd = '0'+dd
+     mm = (date.getMonth() + 1 < 10 ? "0" : "") + (date.getMonth() + 2);
+  }else{
+     mm = (date.getMonth() + 1 < 10 ? "0" : "") + (date.getMonth() + 1);
+  }
+  if(dd ==='010'){
+    dd = dd.substring(1,3);
+  }
+ 
   return `${dd}/${mm}/${anio}`;
 };
 
@@ -546,12 +556,34 @@ let cargarSucursal = () => {
 };
 
 cargarSucursal();
-
 let getDateTime = document.querySelector("#fecha-nueva-venta");
+
+
+const setMaxDate = () =>{
+let today = new Date();
+let dd = today.getDate();
+let mm = today.getMonth() + 1; //January is 0!
+let yyyy = today.getFullYear();
+if (dd < 10) {
+  dd = '0' + dd
+}
+if (mm < 10) {
+  mm = '0' + mm
+}
+
+today = yyyy + '-' + mm + '-' + dd;
+
+let minimum = "2018-01-01";
+getDateTime.max= today;
+getDateTime.min= minimum;
+
+}
+setMaxDate()
 // FUNCIÓN PARA GUARDAR LOS VALORES DE MIS INPUTS Y SELECT/OPTIONS
 let saveData = () => {
   let componentes = getSelectComponentValues(selectComponentes);
   let fecha = new Date(getDateTime.value);
+  console.log(fecha)
   let vendedora = selectOption.value;
   let sucursal = selectSucursal.value;
   if (validateAllItems(componentes, getDateTime.value, vendedora, sucursal)) {
@@ -564,7 +596,7 @@ let saveData = () => {
       componentes: componentes,
       sucursal: sucursal,
     });
-
+    
     limpiarTabla();
     render();
     cargarVentas(nuevoArrVentas);
