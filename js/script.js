@@ -231,7 +231,7 @@ const totalVendido = (ventas) => {
   return acc;
 };
 
-const funcAux = (mes, anio, vend) => {
+const ventasPorMesAñoVend = (mes, anio, vend) => {
   const { ventas } = local;
   let acc = 0;
   for (const { nombreVendedora, fecha, componentes } of ventas) {
@@ -260,7 +260,7 @@ const vendedoraDelMes = (mes, anio) => {
   const ventasPorVendedora = vendedoras.map((vendedora) => {
     return {
       vendedora,
-      ventaTotal: funcAux(mes, anio, vendedora),
+      ventaTotal: ventasPorMesAñoVend(mes, anio, vendedora),
     };
   });
   let acc = 0;
@@ -562,7 +562,7 @@ let getDateTime = document.querySelector("#fecha-nueva-venta");
 const setMaxDate = () =>{
 let today = new Date();
 let dd = today.getDate();
-let mm = today.getMonth() + 1; //January is 0!
+let mm = today.getMonth() + 1; 
 let yyyy = today.getFullYear();
 if (dd < 10) {
   dd = '0' + dd
@@ -580,7 +580,7 @@ getDateTime.min= minimum;
 }
 setMaxDate()
 // FUNCIÓN PARA GUARDAR LOS VALORES DE MIS INPUTS Y SELECT/OPTIONS
-let saveData = () => {
+const saveData = () => {
   let componentes = getSelectComponentValues(selectComponentes);
   let fecha = new Date(getDateTime.value);
   console.log(fecha)
@@ -594,7 +594,7 @@ let saveData = () => {
       fecha: fecha,
       nombreVendedora: vendedora,
       componentes: componentes,
-      sucursal: sucursal,
+      sucursal: sucursal
     });
     
     limpiarTabla();
@@ -642,7 +642,7 @@ const getSelectComponentValues = (select) => {
   return result;
 };
 
-// EVENTO PARA GUARDAR DATOS
+
 openModal.addEventListener("click", (e) => {
   e.preventDefault();
   modalContains.classList.remove("hide");
@@ -717,3 +717,8 @@ window.addEventListener("click", (e) => {
   modalEliminarVenta.classList.add("hide");
   //blurContains.style.filter("none");
 });
+const btnClose2 = document.querySelector('.close2')
+btnClose2.addEventListener('click', () =>{
+  modalEliminarVenta.classList.add("hide");
+
+})
