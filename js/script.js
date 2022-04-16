@@ -362,7 +362,7 @@ const parsearFecha = (date) => {
   let anio = date.getFullYear();
   let mm
   if(dd === '1'){
-    dd = '0'+dd
+    dd = `0${dd}`
      mm = (date.getMonth() + 1 < 10 ? "0" : "") + (date.getMonth() + 2);
   }else{
      mm = (date.getMonth() + 1 < 10 ? "0" : "") + (date.getMonth() + 1);
@@ -517,6 +517,7 @@ acceptDeleteBtn.addEventListener("click", () => {
   deleteData();
   blurContains.style.filter = "none";
   modalEliminarVenta.classList.add("hide");
+  swal("Venta eliminada correctamente", "", "success");
 });
 const limpiarTabla = () => {
   table.innerHTML = "";
@@ -571,7 +572,7 @@ if (mm < 10) {
   mm = '0' + mm
 }
 
-today = yyyy + '-' + mm + '-' + dd;
+today = `${yyyy}-${mm}-${dd}`
 
 let minimum = "2018-01-01";
 getDateTime.max= today;
@@ -587,7 +588,7 @@ const saveData = () => {
   let vendedora = selectOption.value;
   let sucursal = selectSucursal.value;
   if (validateAllItems(componentes, getDateTime.value, vendedora, sucursal)) {
-    alert("Porfavor, complete todos los campos");
+    swal("Por favor, complete todos los campos", "", "warning");
   } else {
     nuevoArrVentas.push({
       id: nuevoArrVentas.length + 1,
@@ -600,6 +601,7 @@ const saveData = () => {
     limpiarTabla();
     render();
     cargarVentas(nuevoArrVentas);
+    swal("Venta añdadida correctamete", "", "success");
   }
 };
 const changeData = () => {
@@ -609,7 +611,7 @@ const changeData = () => {
   let vendedora = selectOption.value;
   let sucursal = selectSucursal.value;
   if (validateAllItems(componentes, getDateTime.value, vendedora, sucursal)) {
-    alert("Porfavor, complete todos los campos");
+    swal("Por favor, complete todos los campos", "", "warning");
   } else {
     nuevoArrVentas.forEach((e) => {
       if (e.id === productoEditarId) {
@@ -623,6 +625,7 @@ const changeData = () => {
     limpiarTabla();
     render();
     cargarVentas(nuevoArrVentas);
+    swal("Venta editada correctamete", "", "success")
   }
 };
 const validateAllItems = (comp, fec, vend, suc) => {
@@ -698,12 +701,13 @@ const activarBotonEditar = () => {
 btnEdit2.addEventListener("click", () => {
   changeData();
   modalContains.classList.add("hide");
-
   btnEdit2.classList.add("show");
+ 
 });
 btnSave.addEventListener("click", () => {
   saveData();
   modalContains.classList.add("hide");
+  
   //blurContains.style.filter("none");
 });
 window.addEventListener("click", (e) => {
