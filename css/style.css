@@ -576,17 +576,17 @@
       margin-top: 1;
     justify-content: center;
     align-items: center;
-    flex-direction: column-reverse;
     margin-top: 5px;
     }
     .spliter{
-      padding: 0.5em;
-      padding-bottom: 2em;
+      padding: 0.7em;
+      padding-bottom: 3em;
       text-align: center;
       margin-top: 2em;
     }
     .modal-2{
       width: 80%;
+      padding-bottom: 2em;
     }
     .btn{
       /* font-size: 1em; */
@@ -621,11 +621,21 @@
     }
     .bestSeller{
       font-size: 1em;
-      margin-top: 1em;
-      margin-right: 8em;
+      margin-top: 0.5em;
+      text-align: left;
    
     }
     .prodEstrella{
       font-size: 1em;
+      text-align: left;
+    }
+    .buttons-flex-2{
+    margin-top: 3em;
+    }
+    .close2{
+      margin-right: 0;
+    }
+    .pe{
+      margin-top: 2em
     }
   }
