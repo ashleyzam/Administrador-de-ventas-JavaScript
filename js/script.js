@@ -473,12 +473,12 @@ const bestSeller = document.querySelector(".bestSeller");
 const render = () => {
   sucCentro.innerHTML = cantidadVentas("Centro", nuevoArrVentas);
   sucCaballito.innerHTML = cantidadVentas("Caballito", nuevoArrVentas);
-  prodEstrella.innerHTML = `<b>Producto Estrella</b>: ${componenteMasVendido(
+  prodEstrella.innerHTML = `<p>Producto Estrella: <b>${componenteMasVendido(
     nuevoArrPrecio
-  )}`;
-  bestSeller.innerHTML = `<b>Mejor Vendedora</b>: ${mejorVendedora(
+  )}</b></p>`;
+  bestSeller.innerHTML = `<p>Mejor Vendedora: <b>${mejorVendedora(
     nuevoArrVentas
-  )}`;
+  )}</b></p>`;
 };
 
 render();
@@ -566,10 +566,10 @@ let dd = today.getDate();
 let mm = today.getMonth() + 1; 
 let yyyy = today.getFullYear();
 if (dd < 10) {
-  dd = '0' + dd
+  dd = `0${dd}`
 }
 if (mm < 10) {
-  mm = '0' + mm
+  mm = `0${mm}`
 }
 
 today = `${yyyy}-${mm}-${dd}`
