@@ -7,7 +7,7 @@ Realicé este proyecto a partir de un diseño guía que nos ofrecen en Ada, pode
 * Las fuentes de mi página son de Google Fonts. https://fonts.google.com/
 
 ## Presentación
- * Lo primero que podemos visualizar en el documento son las ventas por sucursal, luego la tabla de estadísticas que incluye la mejor vendedora y el componente más vendido históricamente. Luego, se encuentra la tabla donde están las ventas preestablecidas.
+ * Lo primero que podemos visualizar en el documento son las ventas por sucursal, a su lado derecho la tabla de estadísticas que incluye la mejor vendedora y el componente más vendido históricamente, finalmente se encuentra la tabla donde están las ventas preestablecidas.
  * Para agregar una venta simplemente seleccionamos el botón ➕ Nueva venta , dónde abre una ventana modal y podemos seleccionar qué vendedora agregar, componentes, sucursal y fecha. Presionando guardar ✔️ pueden lograr verse las opciones actualizadas en nuestra tabla, además de también actualizarse el total de ventas por sucursal, de agregar más componentes y/o vendedoras también se actualiza en estadísticas, el producto y la vendedora estrella históricamente según corresponda. Esta es una funcionalidad que corresponda a todas las moficaciones que hagamos.
  * Si seleccionamos el icono de verde de 🔄 editar venta, podremos modificar los valores de una venta seleccionando sus correspondientes vendedoras, componentes, sucursal y fecha.
  * Para eliminar, sólo debemos posicionarnos sobre el icono rojo 🗑️, que luego abrirá una ventana modal que nos preguntará si realmente queremos hacerlo ⚠️ 
