@@ -8,18 +8,17 @@
     font-family: 'Verdana', sans-serif;
     background-color: rgb(240, 240, 240);
   }
+
   section {
     display: flex;
     align-items: center;
     justify-content: center;
-    /*margin: 0.625em;*/
     padding: 1em;
+
   }
   .grid {
     width: 50%;
     margin: 0.625em;
-    
-    /*border: 0.0625em solid black;*/
   }
   .table {
     border-collapse: collapse;
@@ -77,6 +76,8 @@
   }
   .table-two {
     width: 100%;
+    margin: 1em;
+    padding-bottom: 2em;
   
     /*border: 0.04em solid rgb(241, 241, 241);/
   }
