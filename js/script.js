@@ -325,3 +325,4 @@ acceptDeleteBtn.addEventListener("click", () => {
   modalEliminarVenta.classList.add("hide");
   swal("Venta eliminada correctamente", "", "success");
 });
+

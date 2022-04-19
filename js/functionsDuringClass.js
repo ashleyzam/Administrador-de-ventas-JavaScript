@@ -232,4 +232,5 @@ const precioComponentes = (componente) => {
       });
       return totalVentas;
     };
+    
       
